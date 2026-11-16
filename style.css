@@ -96,3 +96,7 @@ button.button-outline-light:hover{background:rgba(255,255,255,.14)}
 .walk-detail-photos figcaption{margin-top:8px;font-size:12px;line-height:1.8;color:var(--muted)}
 
 
+
+.walk-subtitle{display:block;font-size:.6em;line-height:1.6;margin-top:10px}
+.walk-intro-lead{display:block;color:var(--ink);margin-bottom:12px}
+.place-item .walk-place-lead{color:var(--ink);margin-bottom:10px}
