@@ -161,6 +161,10 @@ const walkPhotoTemplates={classic:`<figure><img src="assets/photos/walk/01_monze
 const modal=document.getElementById('walkModal');const close=()=>{modal.hidden=true;document.body.style.overflow=''};
 document.querySelectorAll('[data-walk]').forEach(el=>el.addEventListener('click',()=>{
   const w=walks[el.dataset.walk];
+  const mapImage=document.getElementById('walkRouteMapImage');
+  mapImage.src='assets/photos/walk/course-maps/asakusa-'+({classic:'monzen',alley:'nukeura',river:'kashi'}[el.dataset.walk])+'.png';
+  mapImage.alt=w.title+'コースの地図';
+  document.getElementById('walkRouteMapCaption').textContent=w.title+'コース';
   const photos=document.getElementById('modalWalkPhotos');
   photos.innerHTML=walkPhotoTemplates[el.dataset.walk];
   photos.setAttribute('aria-label',w.title+'コースの風景と補足資料');
