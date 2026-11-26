@@ -115,3 +115,12 @@ button.button-outline-light:hover{background:rgba(255,255,255,.14)}
 [data-gallery] .gallery-controls button{width:44px;height:44px;padding:0;border:0;border-radius:0;background:transparent;color:#806b56;font:400 24px/1 var(--serif)}
 @media (hover:hover){[data-gallery] .gallery-controls button:hover{background:transparent;color:#514031}}
 @media (max-width:600px){[data-gallery] .collection-heading{padding-right:0}[data-gallery] .gallery-controls{display:flex;grid-area:3 / 1;justify-self:end;margin:2px 0 0}}
+
+/* Scent layering navigation matches the fragrance galleries. */
+.kikigasane-carousel{display:grid}
+.kikigasane-carousel .collection-heading{grid-area:1 / 1;padding-right:100px}
+.kikigasane-track{grid-area:2 / 1;min-width:0}
+.kikigasane-controls{grid-area:1 / 1;align-self:end;justify-self:end;margin-bottom:28px;gap:0}
+.kikigasane-controls button{padding:0;border:0;border-radius:0;background:transparent;color:#806b56;font:400 24px/1 var(--serif)}
+@media (hover:hover){.kikigasane-controls button:not(:disabled):hover{background:transparent;color:#514031}}
+@media (max-width:600px){.kikigasane-carousel .collection-heading{padding-right:0}.kikigasane-controls{grid-area:3 / 1;justify-self:end;margin:2px 0 0}}
