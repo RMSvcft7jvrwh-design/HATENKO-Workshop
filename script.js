@@ -195,7 +195,6 @@ document.querySelectorAll('[data-walk]').forEach(el=>el.addEventListener('click'
   modal.hidden=false;document.body.style.overflow='hidden';document.getElementById('modalClose').focus();
 }));
 document.getElementById('modalClose').addEventListener('click',close);modal.addEventListener('click',e=>{if(e.target===modal)close()});window.addEventListener('keydown',e=>{if(e.key==='Escape'&&!modal.hidden)close()});
-document.querySelectorAll('[data-art]').forEach(el=>el.addEventListener('click',()=>{}));
 
 // Keep the Asakusa layering carousel independent of perfume and walk galleries.
 document.querySelectorAll('[data-kikigasane]').forEach(carousel=>{
