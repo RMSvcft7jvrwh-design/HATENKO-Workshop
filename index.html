@@ -7,6 +7,7 @@
   <meta name="description" content="職業訓練の制作実習として制作した、非公式の学習用サイトです。実在する企業・店舗とは関係なく、実際の体験・予約は受け付けておりません。" />
   <meta name="robots" content="noindex, nofollow" />
   <link rel="stylesheet" href="style.css" />
+  <link rel="stylesheet" href="mobile.css" />
 </head>
 <body>
   <aside class="study-notice" aria-label="制作実習作品について">
@@ -27,19 +28,19 @@
   </nav>
   <main id="top">
     <section class="hero" aria-labelledby="hero-title">
-      <div class="hero-photo" role="img" aria-label="青空の下に立つ雷門と大提灯（AI加工画像）"></div>
+      <div class="hero-photo" role="img" aria-label="浅草の風景"></div>
       <div class="hero-shade"></div>
       <div class="shell hero-content">
         <p class="eyebrow hero-eyebrow">HATENKO × ASAKUSA</p>
-        <h1 id="hero-title">いい香りで、<br class="desktop-only">浅草を歩きませんか？</h1>
-        <p class="hero-sub">破天荒な香りをまとい、いつもと違う浅草へ。</p>
+        <h1 id="hero-title">いい香りで、<br class="desktop-only">浅草を<br class="hero-mobile-break">歩きませんか？</h1>
+        <p class="hero-sub">破天荒な香りをまとい、<br class="hero-mobile-break">いつもと違う浅草へ。</p>
       </div>
       <span class="hero-scroll">SCROLL <span></span></span>
     </section>
 
     <section class="section how-section paper" id="how">
       <div class="shell">
-        <div class="section-heading center"><span class="eyebrow">HOW IT WORKS</span><h2>香りとともに、浅草を歩<span class="heading-ending">く<span class="heading-period">。</span></span></h2><p class="lead">ほんの少し、いつもと違う街歩きを。</p></div>
+        <div class="section-heading center"><span class="eyebrow">HOW IT WORKS</span><h2>香りとともに、<br class="how-mobile-break">浅草を歩<span class="heading-ending">く<span class="heading-period">。</span></span></h2><p class="lead">ほんの少し、いつもと違う街歩きを。</p></div>
         <div class="steps">
           <article class="step"><span class="step-number">01</span><h3>香りを選ぶ</h3><p>店頭で香りを確かめながら、今日の気分に合う香りを。</p></article>
           <article class="step"><span class="step-number">02</span><h3>香りをまとう・重ねる</h3><p>お気に入りの香りをまとう。聞き重ねも楽しめます。</p></article>
@@ -51,7 +52,7 @@
     <section class="section scent-section paper" id="fragrances">
       <div class="shell">
         <div class="section-heading left"><span class="eyebrow">FRAGRANCE COLLECTIONS</span><h2>香りに宿る、物語。</h2><p class="lead">描かれた世界に触れながら、好きな一香を探す。</p></div>
-        <div class="collection" data-gallery>
+        <div class="collection collection-first" data-gallery>
           <div class="collection-heading"><div><span class="eyebrow">COLLECTION 01</span><h3>浮世五香</h3><p>作品と香りの物語に触れる、最初の五香。</p></div></div>
           <div class="gallery-track" tabindex="0" aria-label="浮世絵の世界の作品一覧">
             <div class="art-card"><img src="assets/perfume/ukiyoe/01_hanabi.webp" alt="花火の香水ビジュアル" loading="lazy"><span>花火</span></div>
@@ -111,7 +112,7 @@
     </section>
 
     <section class="section dark-section price-section" id="price">
-      <div class="shell price-content"><span class="eyebrow">EXPERIENCE & BOOKING</span><h2>香りをまとって、浅草<span class="heading-ending">へ<span class="heading-period">。</span></span></h2><div class="price-line"><span>体験料金</span><strong>¥1,000</strong></div><button type="button" class="booking-link" data-demo-booking aria-haspopup="dialog" aria-controls="demoBookingModal">体験を予約する</button><p class="booking-note">予約なしでも体験いただけます。<br>混雑時はお待ちいただく場合があります。</p></div>
+      <div class="shell price-content"><span class="eyebrow">EXPERIENCE & BOOKING</span><h2>香りをまとって、<br class="price-mobile-break">浅草<span class="heading-ending">へ<span class="heading-period">。</span></span></h2><div class="price-line"><span>体験料金</span><strong>¥1,000</strong></div><button type="button" class="booking-link" data-demo-booking aria-haspopup="dialog" aria-controls="demoBookingModal">体験を予約する</button><p class="booking-note">予約なしでも体験いただけます。<br>混雑時はお待ちいただく場合があります。</p></div>
     </section>
 
     <section class="section access-section paper" id="access">
@@ -122,8 +123,10 @@
             <iframe src="https://www.google.com/maps?cid=14176731887961547908&amp;output=embed&amp;hl=ja&amp;z=17" title="inimu STORE 浅草店（東京都台東区浅草2丁目1−5）の地図" width="1100" height="420" loading="lazy" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
           </div>
           <div class="access-copy">
-            <img src="assets/brand/inimu_logo.png" alt="inimu" class="inimu-access-logo"/>
-            <h3>inimu STORE 浅草店</h3>
+            <div class="access-store-heading">
+              <img src="assets/brand/inimu_logo.png" alt="inimu" class="inimu-access-logo"/>
+              <h3>inimu STORE 浅草店</h3>
+            </div>
             <dl class="access-details">
               <dt>住所</dt><dd>東京都台東区浅草2丁目1−5</dd>
               <dt>営業時間</dt><dd>10:30〜18:00</dd>

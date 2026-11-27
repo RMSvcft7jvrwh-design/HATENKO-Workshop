@@ -1,0 +1,276 @@
+.hero-mobile-break {
+  display: none;
+}
+
+.how-mobile-break,
+.price-mobile-break {
+  display: none;
+}
+
+@media (max-width: 600px) {
+  html {
+    scroll-snap-type: y proximity;
+    scroll-padding-top: 60px;
+  }
+
+  main > section,
+  .closing-area {
+    scroll-snap-align: start;
+  }
+
+  .scent-section .collection-second {
+    scroll-snap-align: start;
+    scroll-margin-top: 160px;
+  }
+
+  html:has(.faq-list details[open]),
+  html:has(#walkModal:not([hidden])) {
+    scroll-snap-type: none;
+  }
+
+  .site-header {
+    background: rgba(27, 23, 20, .96);
+  }
+
+  .hero-photo {
+    background-image: url('assets/photos/sensouji.png');
+    background-position: center;
+    background-size: cover;
+  }
+
+  .hero-content {
+    position: absolute;
+    inset: 0;
+    width: 100%;
+    padding: 105px 24px 96px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+  }
+
+  .how-mobile-break {
+    display: inline;
+  }
+
+  .price-mobile-break {
+    display: inline;
+  }
+
+  .price-section {
+    min-height: 100svh;
+    display: flex;
+    align-items: center;
+    padding: 90px 0 48px;
+  }
+
+  .price-section h2 {
+    margin: 20px 0 32px;
+    line-height: 1.55;
+  }
+
+  .price-section .price-line {
+    margin-bottom: 28px;
+  }
+
+  .price-section .price-line strong {
+    font-size: clamp(48px, 13vw, 56px);
+  }
+
+  .price-section .booking-link {
+    font-size: 16px;
+  }
+
+  .access-section {
+    min-height: calc(100svh - 60px);
+    display: flex;
+    align-items: center;
+    padding: 32px 0;
+  }
+
+  .access-section .section-heading {
+    text-align: center;
+    margin-bottom: 16px;
+  }
+
+  .access-section .section-heading h2 {
+    margin: 6px 0 0;
+  }
+
+  .access-section .access-layout {
+    gap: 18px;
+  }
+
+  .access-section .access-map {
+    height: clamp(160px, 24svh, 220px);
+  }
+
+  .access-store-heading {
+    display: flex;
+    align-items: center;
+    flex-wrap: wrap;
+    gap: 8px 14px;
+    margin-bottom: 14px;
+  }
+
+  .access-store-heading .inimu-access-logo {
+    width: 85px;
+  }
+
+  .access-store-heading h3 {
+    margin: 0;
+    font-size: 18px;
+  }
+
+  .access-section .access-details {
+    gap: 5px 12px;
+    margin-bottom: 14px;
+    line-height: 1.7;
+    text-align: left;
+  }
+
+  .faq-section {
+    min-height: calc(100svh - 60px);
+    padding: 70px 0 48px;
+  }
+
+  .faq-section .section-heading {
+    margin-bottom: 28px;
+  }
+
+  .closing-area {
+    min-height: calc(100svh - 60px);
+  }
+
+  .closing-area .final-section {
+    padding: 36px 0 16px;
+  }
+
+  .closing-area .final-section .eyebrow {
+    margin-bottom: 12px;
+  }
+
+  .closing-area .site-footer {
+    padding: 16px 0 32px;
+  }
+
+  .closing-area .footer-inner {
+    gap: 24px;
+  }
+
+  .closing-area .footer-links {
+    gap: 12px;
+  }
+
+  .closing-area .site-footer > small {
+    margin-top: 24px;
+  }
+
+  .closing-area .study-disclaimer {
+    margin-top: 20px;
+    padding-top: 16px;
+  }
+
+  .scent-section .section-heading,
+  .layering-section .section-heading,
+  .walks-section .section-heading {
+    position: sticky;
+    top: 60px;
+    z-index: 2;
+    margin-bottom: 28px;
+    padding: 12px 0;
+    background: linear-gradient(rgba(248,245,237,.78), rgba(248,245,237,.78)), url('assets/backgrounds/washi_light.png') center / 700px repeat;
+  }
+
+  .scent-section .collection[data-gallery] {
+    min-height: calc(100svh - 60px);
+    margin-top: 0;
+    padding: 28px 0 40px;
+    grid-template-rows: auto auto auto;
+    align-content: start;
+  }
+
+  .scent-section .collection-first[data-gallery] {
+    min-height: calc(100svh - 240px);
+    padding: 0 0 40px;
+  }
+
+  .scent-section .collection-heading,
+  .layering-section .collection-heading {
+    margin-bottom: 18px;
+  }
+
+  .layering-section .kikigasane-carousel {
+    min-height: calc(100svh - 240px);
+    padding-bottom: 40px;
+    grid-template-rows: auto auto auto;
+    align-content: start;
+  }
+
+  .layering-section .kikigasane-track {
+    grid-auto-columns: 100%;
+    gap: 32px;
+  }
+
+  .walks-section > .shell {
+    min-height: calc(100svh - 140px);
+  }
+
+  .walks-section .walk-gallery {
+    gap: 32px;
+    margin-right: 0;
+    padding-right: 0;
+    overscroll-behavior-x: contain;
+  }
+
+  .walks-section .walk-card {
+    flex-basis: 100%;
+  }
+
+  .walks-section .walk-photo {
+    aspect-ratio: 3 / 2;
+  }
+
+  .walks-section .walk-card p {
+    height: auto;
+    min-height: 0;
+    overflow: visible;
+  }
+
+  .walks-section .prototype-note {
+    margin-top: 24px;
+  }
+
+  .scent-section .gallery-track {
+    grid-auto-columns: 100%;
+    gap: 32px;
+    margin-right: 0;
+    padding-right: 0;
+  }
+
+  .scent-section .art-card img {
+    aspect-ratio: 1;
+    object-fit: contain;
+    background: transparent;
+  }
+
+  .hero h1 {
+    font-size: clamp(23px, 7vw, 34px);
+    line-height: 1.45;
+    letter-spacing: .02em;
+    margin: 16px 0 20px;
+    white-space: nowrap;
+  }
+
+  .hero h1 .desktop-only,
+  .hero-sub .hero-mobile-break {
+    display: inline;
+  }
+
+  .hero-sub {
+    margin: auto 0 0;
+    font-size: 15px;
+    line-height: 1.9;
+    letter-spacing: .02em;
+  }
+}
