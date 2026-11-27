@@ -126,3 +126,17 @@ button.button-outline-light:hover{background:rgba(255,255,255,.14)}
 @media (max-width:600px){.kikigasane-carousel .collection-heading{padding-right:0}.kikigasane-controls{grid-area:3 / 1;justify-self:end;margin:2px 0 0}}
 
 @media (max-width:600px){.final-section{padding:64px 0 22px}.final-section .eyebrow{margin-bottom:20px}.site-footer{padding-top:22px}}
+
+/* Let the desktop hero fill the viewport beneath the study notice. */
+@media (min-width:851px){.hero{height:calc(100svh - var(--study-notice-height))}}
+
+/* Show fragrance artwork at its natural square proportions on desktop. */
+@media (min-width:851px){.scent-section .art-card img{aspect-ratio:1;object-fit:contain;background:transparent}}
+
+/* Display the route map at its natural proportions without a colored frame. */
+.modal-map{flex:0 1 auto;min-height:0;background:transparent}
+.modal-map::before{display:none}
+.walk-route-map{height:auto;align-items:center;background:transparent}
+.walk-route-map img{flex:none;width:auto;height:auto;max-width:100%;max-height:calc(80vh - 160px)}
+.walk-route-map figcaption{background:transparent}
+@media (max-width:600px){.modal-map{height:auto}.walk-route-map img{max-height:none}}

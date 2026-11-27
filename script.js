@@ -169,7 +169,6 @@ document.querySelectorAll('[data-walk]').forEach(el=>el.addEventListener('click'
   photos.innerHTML=walkPhotoTemplates[el.dataset.walk];
   photos.setAttribute('aria-label',w.title+'コースの風景と補足資料');
   photos.hidden=false;
-  document.querySelector('.modal-reading').scrollTop=0;
   const heading=document.getElementById('modalTitle');
   heading.textContent=w.title;
   if(w.subtitle){const subtitle=document.createElement('span');subtitle.className='walk-subtitle';subtitle.textContent='— '+w.subtitle;heading.append(subtitle)}
@@ -192,7 +191,17 @@ document.querySelectorAll('[data-walk]').forEach(el=>el.addEventListener('click'
     w.outro.paragraphs.forEach((text,index)=>{const p=document.createElement('p');p.textContent=text;if(index)p.style.marginTop='12px';outro.append(p)});
     document.getElementById('modalPlaces').append(outro);
   }
-  modal.hidden=false;document.body.style.overflow='hidden';document.getElementById('modalClose').focus();
+  modal.hidden=false;
+  document.body.style.overflow='hidden';
+  document.getElementById('modalClose').focus({preventScroll:true});
+  const resetModalScroll=()=>{
+    modal.querySelector('.modal-box').scrollTop=0;
+    modal.querySelector('.modal-reading').scrollTop=0;
+  };
+  resetModalScroll();
+  requestAnimationFrame(()=>requestAnimationFrame(()=>{
+    if(!modal.hidden)resetModalScroll();
+  }));
 }));
 document.getElementById('modalClose').addEventListener('click',close);modal.addEventListener('click',e=>{if(e.target===modal)close()});window.addEventListener('keydown',e=>{if(e.key==='Escape'&&!modal.hidden)close()});
 

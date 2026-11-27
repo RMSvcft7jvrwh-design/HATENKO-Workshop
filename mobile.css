@@ -138,6 +138,10 @@
     margin-bottom: 28px;
   }
 
+  .faq-section .faq-list details p {
+    text-wrap: pretty;
+  }
+
   .closing-area {
     min-height: calc(100svh - 60px);
   }
